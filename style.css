@@ -1,0 +1,276 @@
+/* ESTILOS GLOBALES */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth; /* Animacion suave para el desplazamiento vertical */
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    background-color: #2b2d41;
+    border-bottom: 3px solid chartreuse;
+    color: #fff;
+    position: fixed;
+    z-index: 1000;
+    height: 55px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.brand span {
+    color: chartreuse;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    width: auto;
+    display: flex;
+    margin-right: 10px;
+    list-style: none;   
+}
+
+.nav-menu-item{
+    font-size: 18px;
+    margin: 0 auto;
+    width: max-content;
+    cursor:pointer;
+    padding: 8px 10px;
+}
+
+.nav-menu-item:hover{
+    background-color: #2b2d41;
+    color: chartreuse;
+    border-radius: 5Px;
+}
+#menu{
+    display:none;
+}
+#menu-label{
+    display: none;
+}
+.nav-menu-cerrar{
+    display: none;
+}
+
+/* Estilos para el contenido principal */
+main {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Estilos para el título de la sección principal */
+main p {
+    color: #2b2d41;
+    font-size: 18px;
+    /* font-weight: bold; */
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+footer {
+    text-align: center;
+    background-color: #2b2d41;
+    color: white;
+    border-top: 3px solid chartreuse;
+    padding: 10px; /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para las tarjetas de personajes */
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; /* Agregado un límite máximo */
+    background-color: #2b2d41;
+    border-radius: 8px;
+    border: #2b2d41 2px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 5px auto;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    overflow: hidden;
+    height: 200px; /* Ajustar el tamaño de la imagen según sea necesario */
+    border-bottom: chartreuse 2px solid;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+.card-content span {
+    color: chartreuse;
+    font-weight: bold;
+}
+
+.card-action {
+    padding: 15px;
+    text-align: center;
+}
+
+.ver-mas-btn a {
+    color: #2b2d41;
+}
+
+.ver-mas-btn {
+    color: #2b2d41;
+    background-color: chartreuse;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ver-mas-btn:hover {
+    color: chartreuse;
+    background-color: #3c3e52;
+}
+
+.ver-mas-btn a:hover {
+    color: chartreuse;
+}
+
+/* Estilos para el contenedor de los personajes */
+.personajes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Estilos para la paginación */
+.container-paginador {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-paginador p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pagination button {
+    background-color: #2b2d41;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pagination button:hover {
+    background-color: chartreuse;
+    color: #2b2d41;
+}
+
+.numPaginaActual {
+    background-color: chartreuse;
+    color: #2b2d41;
+    padding: 2px 16px;
+    border-radius: 4px;
+    border: #2b2d41 1px solid;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ESTILOS PARA PANTALLAS CHICAS */
+@media screen and (max-width: 768px) {
+
+    .logo {
+        margin-right: auto; 
+    }
+    
+    .menu {
+        margin-left: auto;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+    
+    #menu-label {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        order:3;
+        margin:0 10px;
+    }
+    
+    #menu:checked + .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 55px; 
+        left: 0;
+        color: #2b2d41;
+        background-color: chartreuse;
+        border-bottom: #2b2d41 2px solid;
+        width: 100%;
+        box-shadow: 0 2px 5px #00000033;
+        text-align: center;
+    }
+    
+    .nav-menu-item {
+        padding: 10px;
+        text-align: center;
+    }
+    }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rick and Morty</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+
+      <div class="brand">
+        <h2>Rick <span>and</span> Morty</h2>
+      </div>
+      
+      <div class="menu">
+        <label id="menu-label" for="menu"><i class="fa-solid fa-bars"></i></label>
+      </div>
+      
+      <nav>
+        <input type="checkbox" id="menu">
+        <ul class="nav-menu">
+          <li id="todos" class="nav-menu-item">Todos</li>
+          <li id="mujeres" class="nav-menu-item">Mujer</li>
+          <li id="hombres" class="nav-menu-item">Hombre</li>
+          <li id="sinGenero" class="nav-menu-item">Sin género</li>
+          <li id="noSeSabe" class="nav-menu-item">No se sabe</li>
+        </ul>
+      </nav>
+
+    </header>
+
+  <main>
+    <p>Total de personajes: <span id="total-personajes"></span></p>
+    <div id="raiz" class="personajes-container"></div>
+
+    <div class="container-paginador">
+      <p>Total de páginas: <span id="total-paginas"></span></p>
+
+      <div class="pagination">
+        <button id="first-page"><i class="fa-solid fa-angles-left"></i></button>
+        <button id="prev-page"><i class="fa-solid fa-angle-left"></i></button>
+        <div class="numPaginaActual"><p>Página actual: <span id="pagina-actual"></span></p></div>
+        <button id="next-page"><i class="fa-solid fa-angle-right"></i></button>
+        <button id="last-page"><i class="fa-solid fa-angles-right"></i></button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="brand">
+    <p>Realizado por <span>Pablo Aleluya</span></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
